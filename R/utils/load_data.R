@@ -3,8 +3,7 @@ library(rvest)
 library(tidyverse)
 
 #' Carrega os dados referentes à precificação da soja
-#' no Brasil entre o período mais recente e seis meses
-#' anteriores
+#' no Brasil entre o período mais recente e o ano anterior
 
 load_data <- function() {
   
