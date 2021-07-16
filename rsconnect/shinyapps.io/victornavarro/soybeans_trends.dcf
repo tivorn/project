@@ -1,0 +1,13 @@
+name: soybeans_trends
+title: soybeans_trends
+username:
+account: victornavarro
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4390707
+bundleId: 4824234
+url: https://victornavarro.shinyapps.io/soybeans_trends/
+when: 1626391271.06301
+lastSyncTime: 1626391271.06302
+asMultiple: FALSE
+asStatic: FALSE
