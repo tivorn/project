@@ -5,9 +5,9 @@ account: victornavarro
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4390707
-bundleId: 4824234
+bundleId: 4826731
 url: https://victornavarro.shinyapps.io/soybeans_trends/
-when: 1626391271.06301
-lastSyncTime: 1626391271.06302
+when: 1626451866.69282
+lastSyncTime: 1626451866.69283
 asMultiple: FALSE
 asStatic: FALSE

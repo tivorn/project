@@ -9,6 +9,18 @@ forecasting_ui <- function(id) {
     tabItem(
       tabName = "menu_forecast",
       
+      box(
+        title = strong("Sobre o Painel"),
+        includeMarkdown("www/about.md"),
+        width = 12
+      ),
+      fluidRow(
+        column(
+          uiOutput(ns("last_data_update")),
+          width = 3
+        )
+      ),
+      
       fluidRow(
         box(
           status = "primary",
@@ -91,6 +103,18 @@ forecasting_ui <- function(id) {
 
 forecasting_server <- function(id) {
   moduleServer(id, function(input, output, session) {
+    
+    output$last_data_update <- renderUI({
+      last_date <- df_soybean_price %>%
+        arrange(date) %>%
+        slice(1) %>%
+        pull(date) %>%
+        format("%d/%m/%Y")
+      
+      last_date_update <- str_glue("Atualizado em: {last_date}")
+      
+      span(last_date_update)
+    })
     
     plot_forecast <- function(model_id) {
       fig <- model_forecast %>%

@@ -42,7 +42,7 @@ sidebar = dashboardSidebar(
 )
 
 body = dashboardBody(
-  uiOutput("last_data_update"),
+  
   forecasting_ui("forecasting")
 )
 
@@ -56,17 +56,6 @@ ui <- dashboardPage(
 
 
 server <- function(input, output, seassion) {
-  output$last_data_update <- renderUI({
-    last_date <- df_soybean_price %>%
-      arrange(date) %>%
-      slice(1) %>%
-      pull(date) %>%
-      format("%d/%m/%Y")
-    
-   last_date_update <- str_glue("Atualizado em: {last_date}")
-   
-   span(last_date_update)
-  })
   
   forecasting_server("forecasting")
 } 
